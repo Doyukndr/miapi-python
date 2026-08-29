@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "uk.miapi/miapi",
+  "title": "MIAPI \u2014 Grounded Web Answers",
+  "description": "Web search and AI answers with real source citations and a confidence score.",
+  "version": "1.1.1",
+  "repository": {
+    "url": "https://github.com/Doyukndr/miapi-python",
+    "source": "github"
+  },
+  "websiteUrl": "https://miapi.uk",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "miapi-sdk",
+      "version": "1.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "MIAPI_API_KEY",
+          "description": "Your MIAPI API key. Free tier available at https://miapi.uk",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

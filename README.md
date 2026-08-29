@@ -136,3 +136,32 @@ Sign up free at [miapi.uk](https://miapi.uk) — 500 queries/month included.
 - [API Docs](https://miapi.uk/#docs)
 - [Playground](https://miapi.uk/#playground)
 - [Pricing](https://miapi.uk/#pricing)
+
+<!-- mcp-name: uk.miapi/miapi -->
+
+## Use from Claude Desktop, Cursor or Windsurf (MCP)
+
+MIAPI ships an MCP server, so an AI assistant can search the web and get
+answers with real citations without you writing any code.
+
+```bash
+pip install "miapi-sdk[mcp]"
+```
+
+Then add it to your assistant's MCP config:
+
+```json
+{
+  "mcpServers": {
+    "miapi": {
+      "command": "miapi-mcp",
+      "env": { "MIAPI_API_KEY": "your_key_here" }
+    }
+  }
+}
+```
+
+Tools it provides: `web_answer`, `web_search`, `news_search`, `image_search`,
+`check_usage`.
+
+Get a key at https://miapi.uk — free tier included.

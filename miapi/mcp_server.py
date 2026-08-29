@@ -4,8 +4,7 @@ Lets AI assistants (Claude Desktop, Cursor, Windsurf, etc.)
 use MIAPI for web-grounded AI answers with citations.
 
 Install:
-    pip install "miapi-sdk[mcp]"        # recommended, gives you the `miapi-mcp` command
-    pip install "mcp[cli]<2" httpx      # if running this file directly
+    pip install "mcp[cli]" httpx
 
 Run:
     python miapi_mcp_server.py
@@ -190,5 +189,10 @@ async def check_usage() -> str:
     )
 
 
-if __name__ == "__main__":
+def main():
+    """Console-script entry point, so `miapi-mcp` starts the server."""
     mcp.run()
+
+
+if __name__ == "__main__":
+    main()
